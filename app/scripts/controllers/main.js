@@ -15,6 +15,6 @@ angular.module('youtubeApp')
       'Karma'
     ];
 
-    console.log("hola");
+
 
   });
