@@ -14,7 +14,7 @@ angular.module('youtubeApp')
                 $('#blogForm').slideToggle();
             };
 
-            $http.get('http://www.ngphp.com/api/popData.php')
+            $http.get('http://www.phpapp.com/api/popData.php')
 
                 .success(function(data) {
                     $scope.blogs = data;
@@ -24,7 +24,7 @@ angular.module('youtubeApp')
                 });
 
             $scope.pushData = function($params) {
-                $http.post('http://www.ngphp.com/api/pushData.php',{'title':$params.title, 'description':$params.description, 'count':$params.count })
+                $http.post('http://www.phpapp.com/api/pushData.php',{'title':$params.title, 'description':$params.description, 'count':$params.count })
                     .success(function(data) {
                         $scope.blogs = data;
                     })
@@ -36,7 +36,7 @@ angular.module('youtubeApp')
             $scope.removeData = function($params) {
                 var cnfrm = confirm("Are you sure to delete?");
                 if(cnfrm) {
-                    $http.post('http://www.ngphp.com/api/removeData.php', {'id':$params})
+                    $http.post('http://www.phpapp.com/api/removeData.php', {'id':$params})
                         .success(function(data) {
                             $scope.blogs = data;
                         })

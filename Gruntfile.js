@@ -78,7 +78,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     php: {
       options: {
-        port: 9000,
+        port: 8080,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729,
